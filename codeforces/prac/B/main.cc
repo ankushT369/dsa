@@ -1,49 +1,64 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <cstring>
+#include <string>
+#include <limits.h>
 
-std::vector<int> getDigits(int number) {
-    std::vector<int> digits;
-    while (number > 0) {
-        digits.insert(digits.begin(), number % 10); // Insert digits at the beginning
-        number /= 10;
+std::string getMostRecentlyModifiedFile(const std::string &directoryPath) {
+    DIR *dir;
+    struct dirent *entry;
+    struct stat fileStat;
+    std::string mostRecentFile;
+    time_t mostRecentTime = 0;
+
+    // Open the directory
+    dir = opendir(directoryPath.c_str());
+    if (!dir) {
+        perror("opendir");
+        return "";
     }
-    return digits;
-}
 
-int main() {
-    // Initialize the list with the given elements
-    std::list<int> myList = {45, 36, 89, 51};
+    // Read directory entries
+    while ((entry = readdir(dir)) != nullptr) {
+        std::string filePath = directoryPath + "/" + entry->d_name;
 
-    // Print the original list
-    std::cout << "Original list: ";
-    for (int val : myList) {
-        std::cout << val << " ";
-    }
-    std::cout << std::endl;
+        // Skip directories
+        if (entry->d_type == DT_DIR) {
+            continue;
+        }
 
-    // Iterate through the list and modify it as specified
-    auto it = myList.begin();
-    while (it != myList.end()) {
-        auto next_it = std::next(it);
-        if (next_it != myList.end() && *it > *next_it) {
-            // Replace the current element with its individual digits
-            int currentValue = *it;
-            it = myList.erase(it); // Erase the current element and get iterator to the next element
-            std::vector<int> digits = getDigits(currentValue);
-            for (int digit : digits) {
-                it = myList.insert(it, digit); // Insert each digit
-                ++it; // Move to the next position for the next digit
-            }
-        } else {
-            ++it; // Move to the next element
+        // Get file stats
+        if (stat(filePath.c_str(), &fileStat) == -1) {
+            perror("stat");
+            continue;
+        }
+
+        // Check if the file is the most recently modified
+        if (fileStat.st_mtime > mostRecentTime) {
+            mostRecentTime = fileStat.st_mtime;
+            mostRecentFile = filePath;
         }
     }
 
-    // Print the modified list
-    std::cout << "Modified list: ";
-    for (int val : myList) {
-        std::cout << val << " ";
+    // Close the directory
+    closedir(dir);
+
+    return mostRecentFile;
+}
+
+int main() {
+    std::string directoryPath;
+    std::cout << "Enter the directory path: ";
+    std::cin >> directoryPath;
+
+    std::string mostRecentFile = getMostRecentlyModifiedFile(directoryPath);
+    if (!mostRecentFile.empty()) {
+        std::cout << "Most recently modified file: " << mostRecentFile << std::endl;
+    } else {
+        std::cout << "No files found or unable to read directory." << std::endl;
     }
-    std::cout << std::endl;
 
     return 0;
 }
+
