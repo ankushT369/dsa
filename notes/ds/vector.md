@@ -20,5 +20,3 @@
 
                 rotate();
 
-
-1. [lower](/home/ankush/dsa/notes/algo/bs.md)
