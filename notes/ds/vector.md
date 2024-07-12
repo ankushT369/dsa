@@ -1,4 +1,4 @@
-# Array notes
+# Vector notes
 
 1) Vector access opertions : 
 
