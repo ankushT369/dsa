@@ -10,6 +10,7 @@ int f(int n) {
     if (n == 1) return 1;
     return f(n - 1) + f(n - 2);
 }
+
 ```
 
 The runtime of this recursive function is exponential - approximately  
@@ -17,11 +18,15 @@ The runtime of this recursive function is exponential - approximately  
 ```O(2^n)```  since one function call ```f(n)``` results in 2 similarly sized function calls (```f(n-1)  and  f(n-2)```).
 
 
+### Memoization
+
+Top-Down approach (recurrsive)
 
 
 
+### Tabulation
 
-
+Bottom-Up approach (Iterative)
 
 
 
