@@ -1,3 +1,4 @@
 # dsa
-## dsa solutions by me
-## there are only cf solutions
+
+
+You can find the notes in the dsa/notes section
