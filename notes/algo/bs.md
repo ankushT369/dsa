@@ -1,5 +1,18 @@
 # Binary Search
 
+## Basic Code 
+
+```
+int l = -1, r = n;
+while (r - l > 1) {
+    int m = (l + r) / 2;
+    if (k < a[m]) {
+        r = m; // a[l] <= k < a[m] <= a[r]
+    } else {
+        l = m; // a[l] <= a[m] <= k < a[r]
+    }
+}
+```
 
 ### These are the five algorithms for ascending order respectively in the order of the index of required element in array:
 
