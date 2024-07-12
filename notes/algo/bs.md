@@ -7,9 +7,9 @@ int l = -1, r = n;
 while (r - l > 1) {
     int m = (l + r) / 2;
     if (k < a[m]) {
-        r = m; // a[l] <= k < a[m] <= a[r]
+        r = m;
     } else {
-        l = m; // a[l] <= a[m] <= k < a[r]
+        l = m;
     }
 }
 ```
