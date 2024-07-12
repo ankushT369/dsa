@@ -1,21 +1,21 @@
-   # Array notes
+# Array notes
 
-1) vector<type> vec opertions : 
+1) Vector access opertions : 
 
                 push_back();
                 pop_back();
 
-2) sorting :
+2) Sorting :
 
                 sort(vec.begin() + i , vec.begin() + j);
                 where i is the start index and vec.begin() + j defines the before index of end index;
 
 
-3) reverse :
+3) Reverse :
 
                 reverse(vec.begin() + i, vec.begin() + j);
                 same as the previous ones...;
 
-4) rotate :
+4) Rotate :
 
                 rotate();
