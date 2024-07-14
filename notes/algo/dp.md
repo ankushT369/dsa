@@ -34,4 +34,5 @@ Bottom-Up approach (Iterative)
 
 
 
-#### Reference : https://cp-algorithms.com/dynamic_programming/intro-to-dp.html
+#### Reference 1 : https://cp-algorithms.com/dynamic_programming/intro-to-dp.html
+#### Reference 2 : https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced

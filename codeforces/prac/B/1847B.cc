@@ -31,45 +31,38 @@ int gcd(int a, int b) {
 
 typedef vector<int> vi;
 
-
-
 void f() {
-    int n, k; cin >> n >> k;
+    int n; cin >> n;
     vi a(n);
 
-    for(auto& i : a) {
-        cin >> i;
-        i %= k;
-        if(!i) i = k;
+    for(auto& i : a) cin >> i;
+
+    int op = a[0];
+    for(auto i : a) {
+        op &= i;
     }
 
-    vector<pair<int, int>> p;
-
-    /*
-    vector<int> b(n);
-    iota(begin(b), end(b), 0);
-
-    stable_sort(b.begin(), b.end(), [&](int i, int j) {
-        return a[i] > a[j];
-    });
-    */
-
-    for(auto i = 0; i < n; i++) {
-        p.push_back({a[i], i + 1});
+    if(op != 0) {
+        cout << 1 << '\n';
+        return ;
     }
+    else {
+        int cnt = 0;
+        int oper = a[0];
 
-    sort(p.begin(), p.end(), [&](pair<int, int>& a, pair<int, int>& b){
-        if(a.first == b.first) {
-            return a.second < b.second;
+        for(auto i = 0; i < n; i++) {
+            oper &= a[i]; 
+            if(oper == 0) {
+                cnt++; 
+                if(i + 1 < n) 
+                    oper = a[i + 1];
+            }
         }
-
-        return a.first > b.first;
-    });
-
-    for(auto& it : p) {
-        cout << it.second << " ";
+        cout << cnt << '\n';
+        return ;
     }
-    cout << '\n';
+
+    return ;
 
 }
 
@@ -85,5 +78,16 @@ signed main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
