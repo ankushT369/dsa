@@ -1,4 +1,4 @@
 # dsa
 
 
-You can find the notes in the dsa/notes section
+You can find the notes in the dsa/NOTES section
