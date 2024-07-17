@@ -4,7 +4,7 @@ One of the most basic, classic examples of this process is the fibonacci sequenc
 
 ```f(1) = 1``` . In C++, this would be expressed as:
 
-```
+```cpp
 int f(int n) {
     if (n == 0) return 0;
     if (n == 1) return 1;

@@ -2,7 +2,7 @@
 
 ## Basic Code 
 
-```
+```cpp
 int l = -1, r = n;
 while (r - l > 1) {
     int m = (l + r) / 2;
