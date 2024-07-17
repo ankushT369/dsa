@@ -27,12 +27,26 @@ int gcd(int a, int b) {
 #define maxe max_element
 #define mine min_element
 #define SORT(V) std::sort(V.begin(), V.end())
-#define SORT_R(V) sort(V.begin(), V.end(), greater<>())
 #define FIND(V, num_find) find(V.begin(), V.end(), num_find)
 
 typedef vector<int> vi;
 
 void f() {
+    string x; cin >> x;
+
+    if(x[0] != '1' || x[x.size() - 1] == '9') {
+        pn
+    }
+    else {
+        for(auto i = 1; i < x.size() - 1; i++) {
+            if(x[i] == '0') {
+                pn;
+                return ;
+                break;
+            }
+        }
+        py
+    }
 
 
 }

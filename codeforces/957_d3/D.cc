@@ -36,55 +36,7 @@ void f() {
     string a;
     cin >> a;
 
-    vi pos;
 
-    if(m >= n) {
-        py;
-        return ;
-    }
-
-    for(int i = 0; i < a.size(); ++i) {
-        if(a[i] == 'L') {
-            pos.push_back(i);
-        }
-    }
-
-    if(pos.size() < 2) {
-        vi p;
-        for(int i = 0; i < a.size(); ++i) {
-            if(a[i] == 'L') {
-                p.push_back(i);
-            }
-        }
-        int mini = INT_MAX;
-        for(int i = 1; i < p.size(); ++i) {
-            int dis = p[i] - p[i - 1];
-            if(dis < mini) {
-                mini = dis;
-            }
-        } 
-
-        if(mini > k) {
-            py;
-        }
-        else pn;
-
-    }
-
-    int mini = INT_MAX;
-    for(int i = 1; i < pos.size(); ++i) {
-        int dis = pos[i] - pos[i - 1];
-        if(dis < mini) {
-            mini = dis;
-        }
-    } 
-
-    if(mini > m) {
-        py;
-    }
-    else {
-        pn;
-    }
 
 }
 
