@@ -58,7 +58,7 @@
       std::cout << it->first << ": " << it->second << std::endl;
   }
 
-## 5. Summary of Time Complexities
+## 4. Summary of Time Complexities
 
 | Operation              | `map`         | `unordered_map` |
 |------------------------|---------------|-----------------|
