@@ -9,11 +9,11 @@
 
 ### a. Insertion
 
-- **`map::insert`**:
+- **map insert**:
   - **Syntax**: `m.insert({key, value});`
   - **Time Complexity**: O(log n) due to tree structure.
 
-- **`unordered_map::insert`**:
+- **unordered_map insert**:
   - **Syntax**: `um.insert({key, value});`
   - **Time Complexity**: O(1) on average, O(n) in the worst case due to collisions.
 
@@ -56,6 +56,10 @@
   ```cpp
   for (auto it = m.begin(); it != m.end(); ++it) {
       std::cout << it->first << ": " << it->second << std::endl;
+  }
+
+  for(auto it : m) {
+    std::cout << it.first << " " << it.second << std::endl;
   }
 
 ## 4. Summary of Time Complexities
