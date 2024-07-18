@@ -33,28 +33,30 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
-    int x, k; cin >> x >> k;
-    int sum = 0;
+    int n, m, k; cin >> n >> m >> k;
 
-    int num = x;
-
-    while (num > 0) {
-        sum += num % 10;
-        num /= 10;     
+    if(m == 1) {
+        pn;
+        return ;
     }
-
-    while(sum % k != 0) {
-        sum = 0;
-        x++;
-        int a = x;
-        while(a > 0) {
-            sum += a % 10;
-            a /= 10;
+    if(n % m == 0) {
+        int val = n / m;
+        val = n - val;
+        if(val > k) {
+            py
         }
+        else pn
     }
-   cout << x << '\n';
-
-
+    else {
+        int val = n / m;
+        val++;
+        val = n - val;
+        if(val > k) {
+            py
+        }
+        else pn
+    }
+    
 }
 
 
