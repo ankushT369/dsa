@@ -33,7 +33,31 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
+    int n, x; cin >> n >> x;
+    vi a(n);
+    for(auto&i : a) cin >> i;
 
+    vector<int> pref(n + 1);
+    pref[0] = 0;
+    pref[1] = a[0];
+
+    vector<int> dp(n + 2, 0);
+    for(auto i = 2; i < n + 1; i++) {
+        pref[i] = pref[i - 1] + a[i - 1]; 
+    }
+
+    //for(auto i : pref) cout << i << " ";
+    //cout << '\n';
+
+    for(auto i = n - 1; i >= 0; i--) {
+        int ind = upper_bound(pref.begin(), pref.end(), pref[i] + x) - pref.begin();
+        //cout << "ind : " << ind << '\n';
+        //cout << "i : " << i << '\n';
+        dp[i] = dp[ind] + ind - i - 1;
+    }
+
+    cout << accumulate(dp.begin(), dp.end(), 0ll) << '\n';
+    return ;
 
 }
 

@@ -33,8 +33,22 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
+    int n; cin >> n;
+    string s; 
+    cin >> s;
+    string t;
+    cin >> t;
 
+    for(auto i = 0; i < n; i++) {
+        if(s[i] == '0' && t[i] == '1') {
+            pn
+            return ;
+        }
+        if(s[i] == '1') break;
+    }
 
+    py
+        return ;
 }
 
 
