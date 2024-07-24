@@ -51,7 +51,12 @@
   - `vec.reserve(n);` - Requests that the vector capacity be at least `n`, without changing the size.
   - `vec.shrink_to_fit();` - Reduces the capacity to fit the size of the vector.
 
-## 8. Other Functions
+## 8. Finding Index
+
+- **Find Index of any paticular element**:
+  - `distance(v.being(), it)` - The distance defines the index of the it where it is the iterator to the elelment.
+
+## Other Functions
 
 - **Checking Empty**:
   - `vec.empty();` - Returns `true` if the vector is empty, `false` otherwise.
