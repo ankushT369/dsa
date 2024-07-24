@@ -33,7 +33,7 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
-
+        
 
 }
 
