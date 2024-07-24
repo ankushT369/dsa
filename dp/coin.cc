@@ -71,15 +71,16 @@ void recur(vector<int>& coins, int sum) {
     dp.resize(sum + 1, -1);
     int res = minCoins(coins, sum);
 
-    if (res == INT_MAX) cout << "no way !!\n";
-    else cout << "here's the count: " << res << "\n";
+    if (res == INT_MAX) cout << -1 << '\n';
+    else cout << res << "\n";
 }
 
 int main() {
-    vector<int> coins = {1, 4, 9};
-    int sum = 13;
+    int n, s; cin >> n >> s;
+    vector<int> v(n);
+    for(auto& i : v) cin >> i;
 
-    recur(coins, sum);
+    recur(v, s);
 
     return 0;
 }
