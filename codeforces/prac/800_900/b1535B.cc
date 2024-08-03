@@ -34,14 +34,25 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
+    vi a(n);
+    for(auto& i : a) cin >> i;
+    int cnt = 0;
 
-    if(s.find("0") != string::npos) {
-        py;
+    SORT(a);
+
+    for(auto i = 0; i < n; i++) {
+        for(auto j = i; j < n; j++) {
+            if(i != j) {    
+                if(gcd(a[i], 2 * a[j]) > 1) {
+                    cout << a[i] << " " << a[j] << '\n';
+                    cnt++;
+                }
+            }
+        }
     }
-    else pn;
-    
 
+    cout << cnt << '\n';
+    return ;
 }
 
 

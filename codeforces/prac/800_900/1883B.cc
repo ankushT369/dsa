@@ -33,14 +33,36 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
-    int n; cin >> n;
+    int n, k; cin >> n >> k;
     string s; cin >> s;
+    map<char, int> mp;
 
-    if(s.find("0") != string::npos) {
-        py;
+    for(auto i : s) mp[i]++;
+
+    int sum = 0;
+    int cnt = 0;
+    for(auto it : mp) {
+        if(it.second % 2 != 0) {
+            cnt++;
+        }
     }
-    else pn;
-    
+
+    if(cnt > 1) {
+        if(k < cnt - 1) {
+            pn;
+            return ;
+        }
+        else {
+            py;
+            return ;
+        }
+    }
+    else {
+        py;
+        return ;
+    }
+
+
 
 }
 

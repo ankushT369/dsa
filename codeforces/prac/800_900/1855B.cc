@@ -34,14 +34,18 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
 
-    if(s.find("0") != string::npos) {
-        py;
+    int ans = INT_MIN;
+    int cnt = 0;
+
+    for(auto i = 1; i < n + 1; i++) {
+        if(n % i == 0) cnt++;
+        else break;
+        ans = max(ans, cnt);
     }
-    else pn;
-    
 
+    cout << ans << '\n';
+    return ;
 }
 
 

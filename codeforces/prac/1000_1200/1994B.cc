@@ -35,12 +35,35 @@ typedef vector<int> vi;
 void f() {
     int n; cin >> n;
     string s; cin >> s;
+    string t; cin >> t;
 
-    if(s.find("0") != string::npos) {
+    if(s == t) {
         py;
+        return ;
     }
-    else pn;
+
+    bool run = true;
+    int last_one = -1;
+    for(auto i = 0; i < n; i++) {
+        if(s[i] == '0' && t[i] == '1' && last_one == -1) {
+            run = false; 
+            break;
+        }
+        if(s[i] == '1') {
+            last_one = i;
+        }
+    }
     
+    if(run == true) {
+        py;
+        return ;
+    }
+    else {
+        pn;
+        return ;
+    }
+
+
 
 }
 

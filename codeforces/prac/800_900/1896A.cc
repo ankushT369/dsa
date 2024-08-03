@@ -34,12 +34,35 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
-
-    if(s.find("0") != string::npos) {
-        py;
+    vi a(n);
+    for(auto& i : a) cin >> i;
+    if(a[0] != 1) {
+        pn;
+        return ;
     }
-    else pn;
+    else {
+        py;
+        return ;
+    }
+    /*
+
+    if(is_sorted(a.begin(), a.end())) {
+
+        py;
+        return ;
+    }
+    else {
+        if(a[0] != 1) {
+            pn;
+            return;
+        }
+        else {
+            py;
+            return;
+        }
+
+    }
+    */
     
 
 }

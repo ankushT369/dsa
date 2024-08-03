@@ -36,11 +36,24 @@ void f() {
     int n; cin >> n;
     string s; cin >> s;
 
-    if(s.find("0") != string::npos) {
-        py;
+    int ib = static_cast<int> (s.find_last_of('B'));
+    int ia = static_cast<int> (s.find('A'));
+
+    if(ia == - 1 || ib == -1) {
+        cout << 0 << '\n';
+        return ;
     }
-    else pn;
-    
+
+    if(ib < ia) {
+        cout << 0 << '\n';
+        return ;
+    }
+    else {
+
+        cout << ib - ia << '\n';
+        return ;
+    }
+
 
 }
 

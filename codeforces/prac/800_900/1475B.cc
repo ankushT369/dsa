@@ -34,14 +34,26 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
-
-    if(s.find("0") != string::npos) {
+    if(n % 2020 == 0 || n % 2021 == 0) {
         py;
+        return ;
     }
-    else pn;
-    
+    if(n < 4040) {
+        pn;
+        return ;
+    }
+    else {
+        if((n / 2020) >= (n % 2020)) {
+            py;
+            return ;
+        }
+        else {
+            pn;
+            return ;
+        }
+    }
 
+    return ;
 }
 
 

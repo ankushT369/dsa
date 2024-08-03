@@ -21,7 +21,7 @@ int gcd(int a, int b) {
 
 
 #define int long long
-#define uint unsigned long long 
+#define uint unsigned long long  
 
 #define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define maxe(V) max_element(V.begin(), V.end())
@@ -33,14 +33,19 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
-    int n; cin >> n;
-    string s; cin >> s;
-
-    if(s.find("0") != string::npos) {
-        py;
-    }
-    else pn;
+    int n, a, b; cin >> n >> a >> b;
     
+    if(a >= b) {
+        cout << n * a << '\n';
+        return ;
+    }
+    else {
+        int k = min(b - a + 1, n);
+        
+        cout << ((b + (b - k + 1)) * k) / 2 + (n - k) * a << '\n';
+        return ;
+
+    }
 
 }
 

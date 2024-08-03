@@ -33,14 +33,27 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
-    int n; cin >> n;
-    string s; cin >> s;
+    int a __attribute__((aligned(8))); //
+    int b __attribute__((aligned(8)));
+    cin >> a >> b;
 
-    if(s.find("0") != string::npos) {
-        py;
+    if(a == 1 || b == 1) {
+        cout << 1 << '\n';
+        cout << a << " " << b << '\n';
+        return ;
     }
-    else pn;
-    
+
+    if(__gcd(a, b) != 1) {
+        cout << 2 << '\n';
+        cout << 1 << " " <<  b - 1 << '\n';
+        cout << a << " " << b << '\n';
+        return ;
+    }
+    else {
+        cout << 1 << '\n';
+        cout << a << " "  << b << '\n';
+        return ;
+    }
 
 }
 

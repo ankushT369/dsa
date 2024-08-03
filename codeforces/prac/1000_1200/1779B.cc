@@ -1,3 +1,4 @@
+//#include "tege.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -34,13 +35,44 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
+    //genRandom(n, 1LL, 20LL);
 
-    if(s.find("0") != string::npos) {
-        py;
-    }
-    else pn;
+    //cout << n << '\n';
     
+    if(n == 3) {
+        pn;
+        return ;
+    }
+
+    if(n % 2 != 0) {
+        py;
+        int val = (n - 1) / 2;
+        vi a(n, -1);
+
+        for(auto i = 1; i < n; i++) {
+            if(i % 2 != 0)
+                a[i] = val * a[i];
+        }
+
+        val--;
+
+        for(auto i = 0; i < n; i++) {
+            if(i % 2 == 0)
+                a[i] = val;
+        }
+
+        print(a);
+
+        return ;
+    }
+    else {
+        vi a(n, -1);
+        for(auto i = 1; i < n; i++) {
+            if(i % 2 != 0) a[i] = 1;
+        }
+        py;
+        print(a);
+    }
 
 }
 

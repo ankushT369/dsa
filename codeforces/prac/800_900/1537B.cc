@@ -33,14 +33,11 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
-    int n; cin >> n;
-    string s; cin >> s;
+    int n, m, i, j; cin >> n >> m >> i >> j;
 
-    if(s.find("0") != string::npos) {
-        py;
-    }
-    else pn;
-    
+    cout << 1 << " "  << 1 << " " << n << " " << m << '\n';
+
+    return ;
 
 }
 

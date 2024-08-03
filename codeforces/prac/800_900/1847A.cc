@@ -33,15 +33,28 @@ int gcd(int a, int b) {
 typedef vector<int> vi;
 
 void f() {
-    int n; cin >> n;
-    string s; cin >> s;
+    int n, k; cin >> n >> k;
+    vi a(n);
+    for(auto& i : a) cin >> i;
 
-    if(s.find("0") != string::npos) {
-        py;
+    vi ans;
+
+    for(auto i = 0; i < n - 1; i++) {
+        ans.push_back(abs(a[i] - a[i + 1]));
     }
-    else pn;
-    
 
+    SORT(ans);
+
+    int sum = 0;
+    int it = 0;
+    for(auto i = 0; i < n - k; i++) {
+        sum += ans[it];
+        it++;
+    }
+
+
+    cout << sum << '\n';
+    return ;
 }
 
 

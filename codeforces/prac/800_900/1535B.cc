@@ -1,3 +1,4 @@
+//#include "/home/ankush/dsa/codeforces/prac/1000_1200/tege.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -34,14 +35,26 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
+    vi a(n);
+    for(auto& i : a) cin >> i;
 
-    if(s.find("0") != string::npos) {
-        py;
+    sort(a.begin(), a.end(), [](int a, int b) {
+        return a % 2 < b % 2;
+    });
+
+
+    int ans = 0;
+
+    for(auto i = 0; i < n; i++) {
+        for(auto j = i + 1; j < n; j++) {
+            ans += __gcd(a[i], 2 * a[j]) > 1;
+        }
     }
-    else pn;
-    
 
+    cout << ans << '\n';
+
+    return ;
+    
 }
 
 

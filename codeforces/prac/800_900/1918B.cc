@@ -34,13 +34,24 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
+    vi a(n);
+    vi b(n + 1);
 
-    if(s.find("0") != string::npos) {
-        py;
+    for(auto i = 0; i < n; i++) {
+        cin >> a[i];
     }
-    else pn;
-    
+    for(auto i = 0; i < n; i++) {
+        cin >> b[a[i]];
+    }
+
+    SORT(a);
+
+    print(a);
+    for(auto i = 0; i < n + 1; i++) {
+        if(b[i] != 0) 
+            cout << b[i] << " ";
+    }
+    cout << '\n';
 
 }
 

@@ -34,13 +34,22 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    string s; cin >> s;
+    vi a(n);
+    for(auto& i : a) cin >> i;
 
-    if(s.find("0") != string::npos) {
-        py;
+    if(n == 1) {
+        cout << a[0] << '\n';
+        return ;
     }
-    else pn;
-    
+
+    vi ans;
+
+    for(auto i = 0; i < n; i++) {
+        if(i % 2 == 0)
+            ans.push_back(a[i]);
+    }
+
+    cout << *maxe(ans) << '\n';
 
 }
 
