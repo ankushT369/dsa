@@ -49,30 +49,38 @@ typedef vector<int> vi;
 
 void f() {
     int n; cin >> n;
-    if(n == 1) {
-        cout << 1 << '\n';
-        return ;
-    }
-    else {
-        if(n % 2 == 0) {
-            cout << -1 << '\n';
-            return ;
+    int u = 1;
+    int v = 2;
+    int m;
+    vector<bool> vis(n + 1, false); 
+    vector<vector<int, int>> edge(n - 1, vector<int> (2, 0));
+
+    for(auto i = 1; i <= n - 1; i++) {
+        cout << '?' << " " << u << " " << v << '\n';
+        cout.flush();
+        cin >> m;
+
+        if(m == u || m == v) {
+            vis[u] = true;
+            vis[v] = true;
+
+            edge[i][0] = u;
+            edge[i][1] = v;
+
+            if(m == u) v++;
+            if(m == v) u++;
         }
         else {
-            for(auto i = 1; i <= n; i++) {
-                if(i % 2 != 0) {
-                    cout << i << " ";
-                }
+            if(vis[m] == false) {
+                edge[i][0] = m;
+                if(vis[v] == false) 
+                    edge[i][1] = v;
+                if(vis[u] == false) 
+                    edge[i][1] = u;
             }
 
-            for(auto i = 1; i <= n; i++) {
-                if(i % 2 == 0) {
-                    cout << i << " ";
-                }
-            }
         }
 
-        return ;
     }
 
 }

@@ -1,3 +1,18 @@
+/*
+ * ⠛⠛⣿⣿⣿⣿⣿⡷⢶⣦⣶⣶⣤⣤⣤⣀⠀⠀⠀
+⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀
+⠀⠀⠀⠉⠉⠉⠙⠻⣿⣿⠿⠿⠛⠛⠛⠻⣿⣿⣇⠀
+⠀⠀⢤⣀⣀⣀⠀⠀⢸⣷⡄⠀⣁⣀⣤⣴⣿⣿⣿⣆
+⠀⠀⠀⠀⠹⠏⠀⠀⠀⣿⣧⠀⠹⣿⣿⣿⣿⣿⡿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠿⠇⢀⣼⣿⣿⠛⢯⡿⡟
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠦⠴⢿⢿⣿⡿⠷⠀⣿⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⣷⣶⣶⣤⣤⣤⣤⣤⣶⣦⠃⠀
+⠀⠀⠀⠀⠀⠀⠀⢐⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣿⣿⣿⣿⠟
+*
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -35,21 +50,24 @@ typedef vector<int> vi;
 void f() {
     int n; cin >> n;
     vi a(n);
-    for(auto& i : a) cin >> i;
+    map<int, int> mp;
+    for(auto& i : a) {
+        cin >> i;
+        mp[i]++;
+    }
 
     if(n == 1) {
-        cout << a[0] << '\n';
+        cout << 0 << '\n';
         return ;
     }
+    else {
+        int mf = 0;
+        for(auto i : mp) {
+            mf = max(mf, i.second);
+        }
 
-    vi ans;
-
-    for(auto i = 0; i < n; i++) {
-        if(i % 2 == 0)
-            ans.push_back(a[i]);
+        cout << n - mf << '\n';
     }
-
-    cout << *maxe(ans) << '\n';
 
 }
 

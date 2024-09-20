@@ -43,6 +43,6 @@ def fetch_last_week_problems_solved(handle):
         print(f"Failed to parse data for {handle}: {e}")
 
 # Replace 'coder_salman' with your actual Codeforces handle
-handle = 'coder_salman'
+handle = 'ankushmondal1y2t'
 fetch_last_week_problems_solved(handle)
 

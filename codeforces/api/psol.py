@@ -62,6 +62,6 @@ def fetch_total_problems_solved(handles):
     print(f"Overall rating distribution in the last month: {dict(rating_distribution_last_month)}")
 
 # Replace 'ankushmondal1y2t', 'tristan_tate123', 'coder_salman' with your actual Codeforces handles
-handles = ['ankushmondal1y2t', 'tristan_tate123', 'coder_salman']
+handles = ['ankushmondal1y2t']
 fetch_total_problems_solved(handles)
 
