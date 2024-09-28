@@ -22,6 +22,7 @@ typedef vector<int> vi;
 
 void f() {
 
+    
 }
 
 signed main() {
@@ -32,18 +33,6 @@ signed main() {
     }
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
