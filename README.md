@@ -1,4 +1,4 @@
-# DSA Project
+# DSA 
 
 This repository contains various code implementations, scripts, and notes related to data structures, algorithms, and competitive programming, with a focus on improving skills and solving Codeforces problems.
 
